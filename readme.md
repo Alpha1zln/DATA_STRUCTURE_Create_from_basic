@@ -203,31 +203,47 @@ Go to your GitHub repo → refresh → 🎉 you’ll see all your code uploaded!
 
 ### 🧠 Summary of Commands: 
 1- on local pc, initialize git- 
+```
 git init  
- 
+ ```
+
 2- create branch- 
+```
 git checkout -b branch_ver1 
- 
+```
+
 3- add all files from local pc to git- 
+```
 git add . 
- 
+```
+
 4- commit it- 
+```
 git commit -m "Added new feature" 
- 
+```
+
 5- push files from local pc to github- 
+```
 git push -u origin branch_ver1 
+```
  
+  
 #### → Create PR & Merge on GitHub 
 ... this will bring all latest files from repo to local pc 
-git checkout main 
+```
+git checkout main
+```
+ 
+```
 git pull origin main 
+```
 
 
 
-
-***********************************************************
+*********************************************************** 
 
 ####### extra info. -  
+
 Imp --- 
 1- To see all files in a branch, use cmd ls 
 ```
@@ -239,20 +255,23 @@ ls
 git branch -a
 ```
 
+***********************************************************************************
 
-1 - (Optional) Delete Old Branch (Cleanup)  
-
-Locally:  
+(Optional)  
+3 - Delete Old Branch (Cleanup)   
+ 
+Locally:   
 git branch -d branch_ver1 
 
 Remotely (on GitHub): 
 git push origin --delete branch_ver1 
 
 
-2- 
+4- 
 If wrong repo link is added, then use below steps to enter correct repo -  
+
 🪜 Fix Wrong Remote URL in Git 
-🔹 1. Check Your Current Remote: 
+🔹 a. Check Your Current Remote: 
 ```
 git remote -v
 ```
@@ -262,7 +281,7 @@ origin  https://github.com/wrong-user/wrong-repo.git (fetch)
 origin  https://github.com/wrong-user/wrong-repo.git (push) 
 
 
-🔹 2. Update (Change) the Remote URL: 
+🔹 b. Update (Change) the Remote URL: 
 Use this command: 
 ```
 git remote set-url origin https://github.com/yourusername/your-repo.git 
@@ -270,14 +289,14 @@ git remote set-url origin https://github.com/yourusername/your-repo.git
 
 💡 Replace the above link with your correct GitHub repo URL. 
 
-🔹 3. Verify the Change: 
+🔹 c. Verify the Change: 
 ```
 git remote -v
 ```
 
 ✅ You should now see the new correct repo link.  
 
-🔹 4. (Optional) If You Want to Remove and Re-add Remote:  
+🔹 d. (Optional) If You Want to Remove and Re-add Remote:  
 Instead of updating, you can remove then add again:  
 ```
 git remote remove origin 
@@ -285,7 +304,7 @@ git remote add origin https://github.com/yourusername/your-repo.git
 ```
 
 
-🔹 5. Push Again: 
+🔹 e. Push Again: 
 Once corrected: 
 ```
 git push -u origin main 
