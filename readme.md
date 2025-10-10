@@ -228,8 +228,14 @@ git push -u origin branch_ver1
 ```
  
   
-#### → Create PR & Merge on GitHub 
-... this will bring all latest files from repo to local pc 
+6- #### → Create PR & Merge on GitHub  
+  This step to be done on Github.  
+  PR[Pull Req.] from branch to main.  Merge to main. 
+
+7- 
+   Below 2 cmds will bring all latest files from repo to local pc. 
+   Means, go to main first, then pull all latest files from there to local pc. 
+   
 ```
 git checkout main
 ```
@@ -237,8 +243,34 @@ git checkout main
 ```
 git pull origin main 
 ```
+ 
+8- 
+Once latest files are in your local pc, then u can start creating new features again. 
+ 
+a- At the time of push, a new branch_ver2 should be created, and push new features on it.  
+Creating a br 
+``` 
+git checkout -b branch_ver2
+```
 
-
+b- 
+repeat same steps. 
+```
+git add . 
+git commit -m "Added new feature" 
+git push -u origin branch_ver2
+```
+ 
+c- 
+Then, once verified, PR and merge to main again. 
+On Github, PR from branch_ver2 and merge to main. 
+ 
+d- 
+Then again, bring latest files to local PC [as other team members may have added features too]. 
+```
+git checkout main
+git pull origin main 
+```
 
 *********************************************************** 
 
