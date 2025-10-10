@@ -187,14 +187,61 @@ git pull origin main
 
 ***********************************************************
 
-####### extra info. - 
+####### extra info. -  
 
-(Optional) Delete Old Branch (Cleanup) 
 
-Locally: 
-git branch -d branch_ver1
+1 - (Optional) Delete Old Branch (Cleanup)  
 
-Remotely (on GitHub):
-git push origin --delete branch_ver1
+Locally:  
+git branch -d branch_ver1 
 
-***********************************************************
+Remotely (on GitHub): 
+git push origin --delete branch_ver1 
+
+
+2- 
+If wrong repo link is added, then use below steps to enter correct repo -  
+🪜 Fix Wrong Remote URL in Git 
+🔹 1. Check Your Current Remote: 
+```
+git remote -v
+```
+
+You’ll see something like: 
+origin  https://github.com/wrong-user/wrong-repo.git (fetch) 
+origin  https://github.com/wrong-user/wrong-repo.git (push) 
+
+
+🔹 2. Update (Change) the Remote URL: 
+Use this command: 
+```
+git remote set-url origin https://github.com/yourusername/your-repo.git 
+```
+
+💡 Replace the above link with your correct GitHub repo URL. 
+
+🔹 3. Verify the Change: 
+```
+git remote -v
+```
+
+✅ You should now see the new correct repo link.  
+
+🔹 4. (Optional) If You Want to Remove and Re-add Remote:  
+Instead of updating, you can remove then add again:  
+```
+git remote remove origin 
+git remote add origin https://github.com/yourusername/your-repo.git 
+```
+
+
+🔹 5. Push Again: 
+Once corrected: 
+```
+git push -u origin main 
+```
+
+✅ That’s it!  
+Now your repo is properly connected to the correct GitHub link.  
+
+*********************************************************** 
