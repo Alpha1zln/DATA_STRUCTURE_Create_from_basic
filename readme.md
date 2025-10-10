@@ -1,5 +1,7 @@
 ## DATA STRUCTURE created from basic 
 
+***********************************************************
+
 ### Stack, Queue, Linked List, Bin Tree, etc are created from basics.  
 #### [Cpp code and some in Java too] 
 
@@ -9,7 +11,12 @@
 #### Bin Tree is created using class TreeNode and class BuildTree.
 
 
-### Steps :: How to push code from local pc to github --- 
+***********************************************************
+***********************************************************
+
+
+## Steps :: How to push code from local pc to github --- 
+
 
 ✅ 1. Install Git 
 If git is not installed on pc, do it only once. 
@@ -130,25 +137,25 @@ git push → uploads to GitHub
 You may be asked to log in via browser or GitHub CLI the first time. 
 
 
-✅ 12. Create Pull Request (PR) 
+✅ 12. Create Pull Request (PR)  
 
-Go to your repository on GitHub 
+Go to your repository on GitHub  
 You’ll see a message:  
 👉 “Compare & pull request for branch_ver1”  
-Click it 
-Add title and description 
-Click Create Pull Request 
+Click it   
+Add title and description  
+Click Create Pull Request  
 
 
 ✅ 13. Review and Merge PR 
 
-Once PR is approved (by you or teammate), click Merge pull request 
-Confirm merge → branch branch_ver1 merges into main 
+Once PR is approved (by you or teammate), click Merge pull request  
+Confirm merge → branch branch_ver1 merges into main  
 
 
-✅ 14. Sync Local Repo (After Merge)  ... imp....
+✅ 14. Sync Local Repo (After Merge)  ... imp....  
 
-Switch back to main and update: 
+Switch back to main and update:  
 ```
 git checkout main
 git pull origin main
@@ -162,21 +169,21 @@ Go to your GitHub repo → refresh → 🎉 you’ll see all your code uploaded!
 ***********************************************************
 
 ### 🧠 Summary of Commands: 
-on local pc, initialize git- 
+1- on local pc, initialize git- 
 git init  
-
-create branch- 
+ 
+2- create branch- 
 git checkout -b branch_ver1 
-
-add all files from local pc to git- 
+ 
+3- add all files from local pc to git- 
 git add . 
-
-commit it- 
+ 
+4- commit it- 
 git commit -m "Added new feature" 
-
-push files from local pc to github- 
+ 
+5- push files from local pc to github- 
 git push -u origin branch_ver1 
-
+ 
 #### → Create PR & Merge on GitHub 
 ... this will bring all latest files from repo to local pc 
 git checkout main 
