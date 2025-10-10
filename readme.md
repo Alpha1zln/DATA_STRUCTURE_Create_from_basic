@@ -56,34 +56,58 @@ git init
 ```
 
 
-✅ 6. Add Remote Origin (GitHub Repo URL) 
-```
-git remote add origin https://github.com/username/my-java-project.git 
-```
 
+
+✅ 6. For main, to show on repo --- 
+First time use below steps, just add readme.md. 
+ 
+2️⃣ Create and commit your first version on main 
+``` 
+git add .
+git commit -m "Initial commit"
+
+```
+ 
+3️⃣ Add your remote repo - Add Remote Origin (GitHub Repo URL) 
+```
+git remote add origin  your_repo_link - like "https://github.com/username/my-java-project.git"
+```
 
 To confirm: 
 ```
 git remote -v 
 ```
 
+ 
+4️⃣ Push to main (this creates main both locally and remotely) 
+```
+git branch -M main
+git push -u origin main 
 
-✅ 7. Create a New Branch (e.g., branch_ver1) 
+```
+ 
+✅ Now your repo has a proper main branch on both sides.  
+
+
+✅ 7. 
+Do your work, then below steps to push code on branch_ver1. 
+
+5️⃣ Then create a new branch for your work. 
+Create a New Branch (e.g., branch_ver1) 
 ```
 git checkout -b branch_ver1 
 ```
-
-💡 This:
-Creates a new branch branch_ver1
-Switches you to it immediately
-
-You can verify using:
+💡 This: 
+Creates a new branch branch_ver1 
+Switches you to it immediately 
+ 
+You can verify using: 
 ```
 git branch
 ```
-→ The * shows your current branch.
-
-
+→ The * shows your current branch. 
+ 
+ 
 ✅ 8. Make Changes in Code 
 Edit your files locally (new feature, bug fix, etc.) 
 
@@ -102,7 +126,6 @@ git commit -m "Added feature in branch_ver1"
 
 ✅ 11. Push to GitHub  
 
-If it’s your first push: 
 To create a new branch, br_ver1, then push code to it.  
 🪜 Steps: Create a Branch → Push → Pull Request → Merge 
 ```
@@ -110,13 +133,6 @@ git push -u origin branch_ver1
 ```
 ..........This will create a remote branch named branch_ver1 on GitHub. 
 
-or 
-
-To push code directly to main : 
-```
-git branch -M main 
-git push -u origin main 
-```
 
 
 For later pushes (after making more changes): 
@@ -195,6 +211,16 @@ git pull origin main
 ***********************************************************
 
 ####### extra info. -  
+Imp --- 
+1- To see all files in a branch, use cmd ls 
+```
+ls
+```
+
+2- To see all branches 
+```
+git branch -a
+```
 
 
 1 - (Optional) Delete Old Branch (Cleanup)  
