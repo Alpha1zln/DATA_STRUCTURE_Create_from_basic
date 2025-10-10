@@ -61,14 +61,14 @@ git init
 ✅ 6. For main, to show on repo --- 
 First time use below steps, just add readme.md. 
  
-2️⃣ Create and commit your first version on main 
+2️⃣ 6a Create and commit your first version on main 
 ``` 
 git add .
 git commit -m "Initial commit"
 
 ```
  
-3️⃣ Add your remote repo - Add Remote Origin (GitHub Repo URL) 
+3️⃣ 6b Add your remote repo - Add Remote Origin (GitHub Repo URL) 
 ```
 git remote add origin  your_repo_link - like "https://github.com/username/my-java-project.git"
 ```
@@ -79,24 +79,28 @@ git remote -v
 ```
 
  
-4️⃣ Push to main (this creates main both locally and remotely) 
+4️⃣ 6c Push to main (this creates main both locally and remotely) 
 ```
 git branch -M main
 git push -u origin main 
 
 ```
  
-✅ Now your repo has a proper main branch on both sides.  
-
+Now your repo has a proper main branch on both sides.  
+ 
+ 
+ 
 
 ✅ 7. 
 Do your work, then below steps to push code on branch_ver1. 
 
 5️⃣ Then create a new branch for your work. 
+
 Create a New Branch (e.g., branch_ver1) 
 ```
 git checkout -b branch_ver1 
 ```
+
 💡 This: 
 Creates a new branch branch_ver1 
 Switches you to it immediately 
@@ -108,21 +112,25 @@ git branch
 → The * shows your current branch. 
  
  
+
+ 
 ✅ 8. Make Changes in Code 
 Edit your files locally (new feature, bug fix, etc.) 
 
-
+ 
+ 
 ✅ 9. Add All Files 
 ```
 git add . 
 ```
 
+ 
 
 ✅ 10. Commit Your Changes 
 ```
 git commit -m "Added feature in branch_ver1" 
 ```
-
+ 
 
 ✅ 11. Push to GitHub  
 
@@ -153,6 +161,8 @@ git push → uploads to GitHub
 You may be asked to log in via browser or GitHub CLI the first time. 
 
 
+
+  
 ✅ 12. Create Pull Request (PR)  
 
 Go to your repository on GitHub  
@@ -163,20 +173,27 @@ Add title and description
 Click Create Pull Request  
 
 
+  
 ✅ 13. Review and Merge PR 
 
 Once PR is approved (by you or teammate), click Merge pull request  
 Confirm merge → branch branch_ver1 merges into main  
 
 
+
+  
+
 ✅ 14. Sync Local Repo (After Merge)  ... imp....  
 
-Switch back to main and update:  
+Switch back to main and update:  vp
 ```
 git checkout main
 git pull origin main
 ```
 
+
+
+  
 
 ✅ 12. Verify 
 Go to your GitHub repo → refresh → 🎉 you’ll see all your code uploaded! 
