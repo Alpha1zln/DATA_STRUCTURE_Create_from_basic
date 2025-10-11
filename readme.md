@@ -60,18 +60,21 @@ git init
 
 ✅ 6. For main, to show on repo --- 
 First time use below steps, just add readme.md. 
+
+
+3️⃣ 6a Add your remote repo - Add Remote Origin (GitHub Repo URL) 
+```
+git remote add origin  your_repo_link - like "https://github.com/username/my-java-project.git"
+```
+
  
-2️⃣ 6a Create and commit your first version on main 
+2️⃣ 6b Create and commit your first version on main 
 ``` 
 git add .
 git commit -m "Initial commit"
 
 ```
  
-3️⃣ 6b Add your remote repo - Add Remote Origin (GitHub Repo URL) 
-```
-git remote add origin  your_repo_link - like "https://github.com/username/my-java-project.git"
-```
 
 To confirm: 
 ```
