@@ -152,15 +152,15 @@ For later pushes (after making more changes):
 ```
 git add . 
 git commit -m "Updated project" 
-git push 
+git push -u origin branch_ver_n   
 ```
 
 
 🧠 Notes: 
 ```
-git add . → adds all files  
-git commit -m → saves a snapshot 
-git push → uploads to GitHub 
+git add .                         → adds all files   
+git commit -m "Updates done ..."  → saves a snapshot  
+git push -u origin branch_ver_n   → uploads to GitHub  
 ```
  
 You may be asked to log in via browser or GitHub CLI the first time. 
