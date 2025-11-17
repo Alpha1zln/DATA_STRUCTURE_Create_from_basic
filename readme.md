@@ -5,8 +5,10 @@
 ### Stack, Queue, Linked List, Bin Tree, etc are created from basics.  
 #### [Cpp code and some in Java too] 
 
-#### Stack is created using array and also using LL.
-#### Queue is created using arr & then LL.
+#### Stack is created using array and also using LL. Also, Stack can be created using 2 queues or 1 queue.   
+
+#### Queue is created using arr & then LL. Further, Queue created using 2 stacks.   
+
 #### LL is created using class LinkedNode [struct can also be used] & class BuildLL.
 #### Bin Tree is created using class TreeNode and class BuildTree.
 
