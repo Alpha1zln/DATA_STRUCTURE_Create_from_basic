@@ -1,4 +1,5 @@
-# Heap Using ArrayList
+# Heap Using ArrayList Detailed Note
+#### (readme)
 
 ## 1. What is a Heap?
 
