@@ -893,3 +893,140 @@ Java PriorityQueue
 ```
 
 # End
+
+---
+
+###  Git use to resolve diffc in local repo and remote repo
+
+
+Case --- 
+apzn MINGW64 /f/proj/Bld_data_str_from_basic/DATA_STRUCTURE_Create_from_basic (branchHeapv8)
+
+$ git push -u origin branchHeapv8
+
+To 
+Alpha1zln/DATA_STRUCTURE_Create_from_basic.git
+
+! [rejected]        branchHeapv8 -> branchHeapv8 (fetch first)
+
+error: failed to push some refs to '
+Alpha1zln/DATA_STRUCTURE_Create_from_basic.git'
+
+hint: Updates were rejected because the remote contains work that you do not
+
+hint: have locally. This is usually caused by another repository pushing to
+
+hint: the same ref. If you want to integrate the remote changes, use
+
+hint: 'git pull' before pushing again.
+
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Yes — this is a non-fast-forward rejection.
+
+
+Soltn ------ 
+
+Your situation is:
+
+```
+LOCAL:
+branchHeapv8
+      |
+      |--- your local commits
+```
+
+```
+REMOTE:
+origin/branchHeapv8
+      |
+      |--- some commits you DON'T have locally
+```
+Git refuses to push because pushing your local branch as-is could overwrite the remote commits.
+
+Safest approach:
+Since you want to keep both your local work and whatever is already on GitHub, do:
+```
+git pull --rebase origin branchHeapv8
+```
+
+Then:
+```
+git push -u origin branchHeapv8
+```
+
+```
+#### What pull --rebase does
+
+It essentially:
+- Downloads the remote branchHeapv8 changes.
+- Temporarily moves your local commits aside.
+- Applies the remote commits.
+- Re-applies your local commits on top.
+
+
+So the history becomes:
+
+Before:
+```
+Remote: A---B---C
+              \
+Local:         D---E
+```
+
+
+
+After rebase:
+```
+A---B---C---D'---E'
+```
+
+Your work is preserved.
+```
+
+
+
+```
+##### ⚠️ If you get a conflict
+
+Git may say something like:
+
+CONFLICT (content): Merge conflict in ...
+
+Then:
+git status
+
+Open the conflicted file(s), resolve the conflicts, then:
+
+git add .
+git rebase --continue
+
+Repeat until the rebase finishes.
+
+Then:
+git push -u origin branchHeapv8
+First, you can inspect what exists remotely
+
+If you want to see what remote has that you don't have, run:
+
+git fetch origin
+git log --oneline --graph --decorate HEAD..origin/branchHeapv8
+
+And what you have locally that remote doesn't:
+
+git log --oneline --graph --decorate origin/branchHeapv8..HEAD
+❌ Don't immediately do this
+git push --force
+
+because the remote branch already contains commits you don't have. Force-pushing could overwrite those remote commits.
+
+For your case, I'd use:
+
+git pull --rebase origin branchHeapv8
+git push -u origin branchHeapv8
+
+This is the cleanest solution if both sides' work should be retained.
+```
+
+
+---
