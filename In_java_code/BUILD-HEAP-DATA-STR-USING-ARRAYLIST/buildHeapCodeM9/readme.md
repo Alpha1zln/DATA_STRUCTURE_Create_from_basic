@@ -1,4 +1,5 @@
-# HEAP.md
+# HEAP Brief Note and Code in Pkg
+#### (readme)
 
 > **Repository:** `create-data-structure-from-basic`  
 > **Purpose:** Compact implementation notes for Heap using `ArrayList`, interfaces, and menus.  
