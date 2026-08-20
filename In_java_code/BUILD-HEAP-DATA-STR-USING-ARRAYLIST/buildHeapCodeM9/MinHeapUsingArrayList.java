@@ -84,18 +84,20 @@ import java.util.ArrayList;
 
         // O(log n)
         public void heapifyUpHeap(int lastIdx) {
-            int childIdx = lastIdx; int parIdx = (childIdx-1)/2;
+            int childIdx = lastIdx; int parIdx;
 
-            while( minHeapArrayList.get(parIdx) > minHeapArrayList.get(childIdx) ) {
-                
+            while( childIdx > 0 ) {
+                parIdx = (childIdx-1)/2;
+
                 if( minHeapArrayList.get(parIdx) > minHeapArrayList.get(childIdx) ) {
                     swap(parIdx, childIdx);
                 }
-                childIdx=parIdx;
-                parIdx = (childIdx-1)/2;
+
+                childIdx= parIdx;
             }
         } // hpfyUp end
 
+        
         // O(log n)
         public void heapifyDownHeap(int index) {
             int size = minHeapArrayList.size();

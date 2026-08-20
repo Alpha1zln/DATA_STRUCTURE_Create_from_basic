@@ -74,3 +74,16 @@ release/
 *.tar
 *.gz
 *.7z
+
+# ==========================  
+# Java compiled files
+*.class
+
+# Build directories
+target/
+out/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
